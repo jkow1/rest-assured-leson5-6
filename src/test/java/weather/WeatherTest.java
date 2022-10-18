@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.given;
 public class WeatherTest extends TestBase {
 
     @DisplayName("Get should respond with weather info for city ID")
-    @ParameterizedTest(name = "Test for city with id {0}")
+    @ParameterizedTest(name = "{index}. Test for city with id {0}")
     @ValueSource(ints = {2643743,2640729,3099434})
     @Tag("weather")
     @Tag("regression")
